@@ -54,9 +54,10 @@ class SocialAuth
 
     protected function absoluteUrl($url)
     {
+
         if (strpos($url, 'http') === 0) {
             return $url;
-        } else {
+        } elseif(isset($_SERVER['HTTPS']) && isset($_SERVER['SERVER_PORT']) && isset($_SERVER['HTTP_HOST'])) {
             $isSecure = false;
             if ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || $_SERVER['SERVER_PORT'] == 443) {
                 $isSecure = true;

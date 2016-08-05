@@ -1,7 +1,7 @@
 {
     "name": "hindy/social_auth",
     "homepage": "https://github.com/hashstudio/Mindy_SocialAuth",
-    "version": "0.3",
+    "version": "0.3.1",
     "license": "MIT",
     "autoload": {
         "psr-4": {
